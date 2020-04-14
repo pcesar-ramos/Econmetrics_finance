@@ -14,10 +14,15 @@
 # Plot
   x11()
   plot(preciotesla)
-# Para obtener ayuda de un comando
+# Para obtener ayuda de un comando solo el PRECIO DE CIERRE
   ?get.hist.quote
   preciotesla = get.hist.quote(instrument = "TSLA", quote = "Close")
   plot(preciotesla)
   
-  m
+# Para graficar tomando en cuenta la fecha de inicio y final
+  preciotesla = get.hist.quote(instrument = "TSLA", quote = "Close", start = "2010-06-28", end = "2015-06-23")
+  x11()
+  plot(preciotesla)
+  
+  
   
