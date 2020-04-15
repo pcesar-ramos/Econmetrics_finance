@@ -64,3 +64,5 @@
   
   acf(WTI_ret)
   pacf(WTI_ret)
+
+  
