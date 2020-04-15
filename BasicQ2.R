@@ -20,7 +20,8 @@ getSymbols.yahoo('TSLA', env = globalenv(), return.class = "xts",
 # Graficamos mediante una matriz para observar todos los datos
 # utilizamos el comando layout(matrix(c(row, col)))
 layout(matrix(c(1, 2, 3, 4, 5, 3), 2, 3, byrow = TRUE))
-chart.TimeSeries(TSLA$TSLA.Open, main = "Open price")
 chart.TimeSeries(TSLA$TSLA.Low, main = "Low price")
+chart.TimeSeries(TSLA$TSLA.Open, main = "Open price")
 chart.TimeSeries(TSLA$TSLA.Close, main = "Close price")
 chart.TimeSeries(TSLA$TSLA.High, main = "High price")
+chart.TimeSeries(TSLA$TSLA.Close, main = "Close price")
