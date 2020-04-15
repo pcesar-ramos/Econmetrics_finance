@@ -14,13 +14,14 @@ library(tseries)
 
 # Descargamos la base de datos de Microsoft
 getSymbols.yahoo('MSFT', env = globalenv(), return.class = "xts",
-                 from = '2000-01-01', to = Sys.Date(),
-                 periodicity = 'daily')
+                 from = '2010-01-01', to = Sys.Date(),
+                 periodicity = 'monthly')
 
 # Graficamos mediante una matriz para observar todos los datos
+
 par(mfrow=c(2,2))
-chartSeries(MSFT$MSFT.Open)
-chartSeries(MSFT$MSFT.Low)
-chartSeries(MSFT$MSFT.Close)
-chartSeries(MSFT$MSFT.High)
+chart.TimeSeries(MSFT$MSFT.Open, main = "Open price", period.color = "aliceblue")
+chart.TimeSeries(MSFT$MSFT.Low, main = "Low price", event.color = "darkgray")
+chart.TimeSeries(MSFT$MSFT.Close, main = "Close price", grid.color = "lightgray")
+chart.TimeSeries(MSFT$MSFT.High, main = "High price")
 par(mfrow=c(1,1))
