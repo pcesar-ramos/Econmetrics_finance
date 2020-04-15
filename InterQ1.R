@@ -65,6 +65,7 @@ adf.test(DAX$DAX.Close)
 
 df_EURUSD = ur.df(EURUSD$`EURUSD=X.Close`, type = c("trend"), selectlags = c("BIC"))
 summary(df_EURUSD)
+adf.test(EURUSD$`EURUSD=X.Close`)
 
 # Utilizaremos el test de raíz unitaria de Dickey Fuller con los rendimientos      
 df_KO_ret = ur.df(KO_ret, type = c("trend"), selectlags = c("BIC"))
@@ -77,3 +78,4 @@ adf.test(DAX_ret)
 
 df_EURUSD_ret = ur.df(EURUSD_ret, type = c("none"), selectlags = c("BIC"))
 summary(df_EURUSD_ret) 
+adf.test(EURUSD_ret)
