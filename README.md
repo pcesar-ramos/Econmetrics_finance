@@ -1,4 +1,4 @@
-### Econmetrics_finance
+### Financial Econmetrics with R-studio
 
 
 - Rstudio codes
